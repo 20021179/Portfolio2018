@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+/* This section of css code if for setting all form buttons*/
+ input.calcBut {
+  width:3em;
+  height:3em;
+  line-height: 0.75em; 
+ } 
+  reset.calcBut {
+  width:3em;
+  height:3em;
+  line-height: 0.75em; 
+ } 
+ 
+ 
+</style>
+<!--Below link references external css -->
+<link rel="stylesheet" type="text/css"href="basic_calculator.css"/>
+<!-- external javascript file for accessing calculation functions-->
+<script  src='basic_calculator.js'></script>
+<!--start of script being used in head section-->
+<script language="JavaScript" type="text/JavaScript">
+<!--Declaring variables-->	
+var now;	// used for setting date
+var dayName=new Array("Sun","Mon","Tues","Wed","Thurs","Fri","Sat");
+var monName=new Array("January","February","March","April","May","June","July","August","September",
+"October","November","December");
+
+	function set_date() {
+	var frm; // used for setting the entire value
+	
+	//Ensure date is read as current each time update is performed
+	now = new Date();
+	//Format time.  Straitfoward except for ýear', which is relitive to 1900, addition corrects + '1900, only if need be'
+	
+	frm =dayName[now.getDay()]
+	+' '+monName[now.getMonth()]
+	+' '+now.getDate()
+	+' '+(parseInt(now.getYear()))// make sure year is an integer ,frm extracts the day,month,date,time by used get method
+	+' '+now.getHours()
+	+':'+now.getMinutes()
+	+':'+now.getSeconds();
+	
+	document.getElementById('calender').innerHTML = frm;//displays extracted result in the named identifier
+	
+	setTimeout("set_date()", 1000);// passes function to first parameter, second parameter is set to 1000 millseconds
+}
+
+
+		</script>
+</head>
+
+<!--onload load the time function first-->
+<body bgColor="navy" onload="set_date();" text="white">
+<!--Title first--><center><img src="logo.gif"/><h1>Basic Calculator</h1></center>
+<center>
+<!--Beginning of form-->
+<form name="calculator">
+<br/>
+	<table bgColor="#33366" height="50%" width="50%" cellspacing="2" cellpadding="2"  border="1">
+	<tr><center>
+		<td width ="2.5%" colspan="5" bgColor="silver">
+		<!--User can not write to field--display screen goes here-->
+		<input type="text" size="80" name="screen" readonly>
+		</td></center>
+		
+	
+	</tr>
+	
+	<tr><!--Start of button layout-->
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" 7 " name="b1" onclick="calculate(7);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut"  value="  8  " name="b1" onclick="calculate(8);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" 9 " name="b1" onclick="calculate(9);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" / " name="b1" onclick="operator('/');"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" sqrt " name="b1" onclick="operator('sqrt');">
+		</td>
+	</tr>
+
+	<tr>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value="4" name="b1" onclick="calculate(4);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value="5" name="b1" onclick="calculate(5);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value="6 " name="b1" onclick="calculate(6);"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" - " name="b1" onclick="operator('-');"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" x " name="b1" onclick="operator('x');">
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" 1 " name="b1" onclick="calculate(1);"></td>
+		<td width="2.5%" align="center" align="center">
+		<input type="button" class="calcBut" value=" 2 " name="b1" onclick="calculate('2');"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" 3 " name="b1" onclick="calculate(3)"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" value=" + " name="b1" onclick="operator('+')"></td>
+		<td width="2.5%" align="center">
+		<input type="button" class="calcBut" class="power" name="b1" value="x^2" onclick="operator('x^2')"><!--All the above get passed to an external function-->
+		</td>
+
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="2.5%" bgColor="#33366" align="center">
+		<input type="button" class="calcBut" value="0" name="b1" onclick="calculate('0');"></td><!--Passes to function-->
+		<td width="2.5%" bgColor="#33366" align="center">
+		<input type="button" class="calcBut" value=" . " name="b1" onclick="calculate('.');"></td><!--Sends decimal to sreen, while passing to a function-->
+		<td width="2.5%" bgColor="#33366" align="center">
+		<input type="button" value="C " class="calcBut" onclick="calClear();"></td><!--Clears all fields once clicked-->
+		
+		<td width="2%" bgColor="#33366" align="center">
+		<input type="button" class="calcBut" value=" = " name="b1" onclick = "equals();"><!--Displays answer once clicked-->
+		</td><!--End of button layout-->
+		<td width="2.5%" align="center">
+		<!--This line calls a window pop up--><input type="button" class="calcBut" value="Help!" onclick="popWesel()"></td>
+
+
+
+	</tr>
+	
+	
+	</table>
+</form>
+<!--End of form-->
+</center>
+
+	<div id="calender" align="center"></div><!--Displays clock-->
+	
+	
+</body>
+</html>
+</html>

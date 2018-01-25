@@ -1,0 +1,33 @@
+/* CSS Document */
+p{
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	}
+
+
+	
+a:link {
+	color:#FF00FF;
+	text-decoration: underline;
+
+}
+
+a:hover{color:#999999;
+		text-decoration:underline;
+		}
+		
+		.headline{
+		color:#0000FF;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:18px;
+		font-weight:bold;
+		display:block;
+		}
+		
+.byline{
+	color:#666600;
+	font-style:italic;
+	font-weight:bold;
+	display:inline;
+	}

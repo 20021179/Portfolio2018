@@ -1,0 +1,162 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtmll /DTD/xhtmll-transitional.dtd">
+<html>
+<head>
+<title>form1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="Javascript" src="javascript/javascript.js">
+pluginCheck(); document.form1.first.value=userName
+var first=document.form_cookie.first.value;
+document.cookie="UserName="+first+";expires="+expireDate.toGMTString();
+ 
+</script>
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+
+<body>
+
+<form  name="form1" action="http://192.168.0.21/~davidt/RR_form_process.php" method="POST"  onSubmit="return checkData(document.form1);">
+
+<div class="baboon">
+     <div class="snake">
+	 <span>First Name</span><input type="text" name="first" value="" onBlur="setCookie()"/>
+	 
+  	<span>Last Name</span><input type="text" name="last" value="" />
+	
+    <span>Address</span><input type="text" name="address1"/>
+	
+	 <span></span> <input name="address2" type="text"/>
+	  
+	 <span></span><input name="address3" type="text" />
+      
+      <span>Email</span><input type="text" name="email" value=""/>
+   
+    
+	
+	  
+	    </div>
+	 
+      
+    
+    
+    <div class="monkey">
+	Preferred Contact:
+	
+      </div>
+      
+   <div class="monkey">
+    <input name="checkbox" type="checkbox"  onclick="makeEnable()">
+    <select name="mySelect" disabled="true"  onChange="preChoose();">
+        <option id="öpt1" value="email">email</option>
+        <option id="opt2" value="phone" >phone</option>
+        <option id="opt3" value="postal">postal</option>
+		
+		
+     </select>
+	
+	<input type="hidden" name="formname" value="feedback"/>
+			<div class="radios"><input type="radio" value="landline" name="r1">landline<input type="radio" value="mobile" name="r1">mobile<input type="radio" value="fax" name="r1">fax</div>
+ <div class=" phone">Phone<input type="text" name="phone" /></div>
+	
+  </div>
+     
+    
+    <div class="ape">
+      <input  type="submit" value="Submit" />
+      <input  type="reset"/>
+	  <input type="hidden" name="user_agent" value="">
+	  <input type="hidden" name="flash_version" value="">
+	  <input type="hidden" name="flash_detected" value=""></div>
+	  
+<script type="text/javascript">
+<!--
+var hasFlash=0;
+var pluginVer=0;
+isMs=false;
+if(navigator.plugins&&navigator.plugins.length)
+{
+	plugStrin=navigator.plugins["Shockwave Flash"];
+	if(plugStrin)
+	{
+		hasFlash=2;
+		if(plugStrin.description)
+		{
+			descVer=plugStrin.description;
+			pluginVer=descVer.charAt(descVer.indexOf(".")-1);
+			pluginVer=parseInt(pluginVer);
+		}
+	}
+	else
+	{
+		hasFlash=1;
+	}
+	if(navigator.plugins["Shockwave Flash 2.0"])
+	{
+		hasFlash=2;
+		pluginVer=2;
+	}
+}	
+else if(navigator.mimeTypes&&navigator.mimeTypes.length)
+{
+	mimeStrin=navigator.mimeTypes['application/x-shockwave flash'];
+	if(mimeString&&mimeStrin.enabledPlugin)
+	{
+		hasFlash=2;
+	}
+	else
+	{
+		hasFlash=1;
+	}
+}
+else
+{
+	isMs=true;
+}
+
+
+//-->
+</script>
+<script type="text/VBScript">
+<!--
+On Error Resume Next
+If isMs=true THEN
+	FOR i=2 TO 7
+		IF NOT(IsObject(CreateObject("shockwaveFlash.ShockwaveFlash."&i)))THEN
+		ELSE
+			hasFlash=2
+			pluginVer=i
+		END IF
+	NEXT
+END IF
+IF hasFlash =0 THEN 
+	hasFlash=1
+END IF
+//-->
+</script>
+<script type="text/javascript">
+<!--
+if(hasFlash==2)
+{
+	document.form1.flash_detected.value=true;
+	document.form1.flash_version.value=pluginVer;
+}
+else if (hasFlash==0||hasFlash==1||pluginVer==0)
+{
+	document.form.flash_installed.value=false;
+	document.form.flash_ver.value=pluginVer;
+}
+else
+{
+	document.form.flash_installed.value=false;
+	document.form.flash_ver.value=pluginVer;
+}
+//-->
+</script>
+<div class="close">
+<input type="button" value="close window" onclick="closeMe();"/></div>    
+</form>
+
+
+
+</body>
+</html>

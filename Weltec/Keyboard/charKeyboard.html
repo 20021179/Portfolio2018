@@ -1,0 +1,276 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script language="JavaScript" type="text/JavaScript">
+var strChar="";
+var numChar=0; // set to 0 to indicate integer(total)
+var Op=""; // the operator
+var regEx=/[a-z|A-Z]/;
+var frmGroup=new Array();
+
+function display(fieldObj)
+{		
+	var elem=document.frm.screen.value+=fieldObj.value;
+   /* start of outter loop*/for(i=0; i<document.forms[1].elements.length; i++){
+	frmGroup=document.forms[1].elements[i].name;
+	
+   //alert(document.forms[1].elements[i].name)
+   }// end of outter loop
+
+}
+
+		//alert(i.length);//i.length;
+		//var elem=document.frm.screen.value+=fieldObj.value;
+		//caps=caps.toUpperCase();
+		//alert(caps)
+
+</script>
+<style>
+.butts{
+	background-color:silver;
+	width:3.1em;
+	
+}
+table{
+border-color:blue;
+border-weight:solid;
+}
+.screen{
+	height:200px;
+}
+input{
+	font-size:10px;
+	background-color:silver;
+}
+.shift{
+	width:8em;
+	}
+.caps{
+	width:5.2em;
+	}
+.tab{
+	width:3.2em;
+}
+.backspace{
+	width:5.4em;
+}
+.enter{
+	width:6.4em;
+}
+.back{
+	width:3.8;
+}
+
+.space{
+	width:25em;
+}
+.alt{
+	width:3.1em;
+}
+</style>
+
+</head>
+<body bgColor="black">
+<div align="center">
+<form name="frm">
+<input type="textarea" size="80" class="screen" name="screen">
+</form>
+</div>
+<form name="keyboard">
+<table bgColor="gray" cellspacing="1" cellpadding="2" border="0" color="blue" width="50%" align="center">
+<tr>
+<td>
+
+</td>
+</tr>
+<tr>
+<td width="3%">
+<input type="button" value="`" class="butts" name="squiggle" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="1" class="butts" name="one" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="2" class="butts" name="two" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="3" class="butts" name="three" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="4" class="butts" name="four" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="5" class="butts" name="five" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="6" class="butts" name="six" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="7" class="butts" name="seven" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="8" class="butts" name="eight" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="9" class="butts" name="nine" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="0" class="butts" name="zero" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="-" class="butts" name="minus" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="=" class="butts" name="equals" onclick="display(this);">
+</td>
+<td width="3%" colspan="3">
+<input type="button" value="backspace" class="backspace" name="backspace" onclick="display(this);">
+
+</td>
+</tr>
+<tr>
+<td width="3%">
+<input type="button" value="tab" class="tab" name="tab" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#920" class="butts" name="q" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#937" class="butts" name="w" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#949" class="butts" name="e" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#961" class="butts" name="r" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#964" class="butts" name="t" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#936" class="butts" name="y" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#956" class="butts" name="u" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#921" class="butts" name="i" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#959" class="butts" name="o" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#960" class="butts" name="p" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="[" class="butts" name="leftBrace" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="]" class="butts" name="rightBrace" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="\" class="butts" name="backSlash" onclick="display(this);">
+</td>
+</tr>
+<tr>
+<td width="3%">
+<input type="button" name="caps" value="Caps lock" name="capLock" class="caps" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#945" class="butts" name="a" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#931" class="butts" name="s" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#948" class="butts" name="d"onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#934" class="butts" name="f" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="u+0074" class="butts" name="g" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#951" class="butts" name="h" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value=";" class="butts" name="j" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#954" class="butts" name="k" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#955" class="butts" name="l" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value=":" class="butts" name="colon" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value=";" class="butts" name="dash" onclick="display(this);">
+</td>
+<td width="3%" colspan="2">
+<input type="button" value="Enter" class="enter" name="enter" onclick="display(this);">
+</td>
+</tr>
+<tr>
+<td width="3%">
+<input type="button" value="Shift" class="shift" name="shift" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#950" class="butts" name="z" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#958" class="butts" name="x" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#967" class="butts" name="c" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="," class="butts" name="v" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#946" class="butts" name="b" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#957" class="butts" name="n" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="&#956" class="butts" name="m" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="," class="butts" name="comma" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="." class="butts" name="dot" onclick="display(this);">
+</td>
+<td width="3%">
+<input type="button" value="/" class="butts" name="forwardSlash" onclick="display(this);">
+</td>
+<td width="3%" colspan="2">
+<input type="button" value="Shift" class="shift" name="shift2" onclick="display(this);">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<input type="button" value="ctrl" name="control" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="alt" class="alt" name="alt1" onclick="display(this);">
+</td>
+<td width="3%" colspan="10" align="center">
+<input type="button" value="space bar" class="space" name="spaceBar" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="alt" class="alt" name="alt2" onclick="display(this);">
+</td>
+<td>
+<input type="button" value="ctrl" name="control2" onclick="display(this);">
+</td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>

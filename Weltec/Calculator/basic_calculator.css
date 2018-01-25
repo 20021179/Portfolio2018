@@ -1,0 +1,18 @@
+/*--------------this section is used for the help button link----------------*/
+
+table{border-color:black;
+}
+table{border:solid;}
+td{border:0;}
+h1{font-family:"Arial Black","Helvetica", san-serif;font-weight:normal;color:white; font-size:18pt;}/* title*/
+h2{font-family:"Arial","Helvetica", san-serif;font-weight:normal;color:red; font-size:12pt;}/* sub titles*/
+h3{font-family:"Verdana", "Helvetica", sans-serif; font-weight:italic;color:navy; font-size:8pt;}/* text body*/
+h4{font-family:"Arial Bold","Helvetica", san-serif;font-weight:bold;color:green; font-size:10pt;}/*emphasis*/
+
+
+
+
+input.calcBut{color:red; font-size:12px; font-weight:bold;}
+
+div#logo{background-image:logo.gif;position:absolute; top:0px; left:30%;}
+

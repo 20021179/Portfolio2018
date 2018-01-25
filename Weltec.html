@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="header">
+  <h1>Mike's Portfolio 2018</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li><a href="Whitireia.html">Whitireia</a></li>
+      <li><a href="Weltec.html">Weltec</a></li>
+      <li><a href="Natcoll.html">Natcol</a></li>
+      <li><a href="I.A.T.html">I.A.T</a></li>
+	  <li><a href="Carich.html">Carch</a></li>
+	  <li><a href="index.html">Main</a></li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>Weltec</h1>
+    <h2>Bachelor of Information Technology - Level 5 Diploma</h2>
+	<button class="accordion">Communication Studies</button>
+	<div class="panel">
+	<p>Writing reports, business letters and following APA standards.</p>
+	</div>
+	
+	<button class="accordion">Serverside Scripting</button>
+	<div class="panel">
+	<p>PHP & ASP - Content coming soon!</p>
+	</div>
+	
+	<button class="accordion">Visual Basic Net</button>
+	<div class="panel">
+	<p>Basic programming in VB - Good introduction to writing applications.</p>
+	</div>
+	
+	<button class="accordion">Fundamentals of Hardware</button>
+	<div class="panel">
+	<p>Reparing and constructing a desktop computer. Installing OS's, software and configuring system.</p>
+	</div>
+	
+	<button class="accordion">Web Media</button>
+	<div class="panel">
+	<p>Level 6: This consisted of building and constructing basic websites using Dreamweaver and applying scripting languages in CSS, HTML with 
+	basic photo manipulation.<a href="Weltec/WebMedia/index.htm">Hasno Inspection Services</a></p>
+	</div>
+	
+	<button class="accordion">Database Design</button>
+	<div class="panel">
+	<p>This covered topics such as normalization in 1st and 2nd form. Relations such as one to one, one to many and many to many were analyzed.</p>
+	</div>
+
+	<button class="accordion">ClientSide Scripting</button>
+	<div class="panel">
+	<p>This consisted of learning how to mix CSS with JavaScript and create DHTML webpages. <a href="ClientSide.html">Clientside Applications</a></p>
+	</div>
+  
+  
+</ol>
+  </div>
+</div>
+
+<div class="footer">
+  <p>MIke's Portfolio</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+} 
+</script>
+</body>
+</html>

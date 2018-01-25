@@ -1,0 +1,64 @@
+
+
+.menu{
+	background-color:silver;
+	font-size:10px;
+	color:red;
+	width:100px;
+	left:-100px;
+	position:relative;
+}
+
+.butts{
+	background-color:silver;
+	width:3.0em;
+	
+}
+.butts1{
+	background-color:silver;
+	width:2.8em;
+	
+}
+.butts2{
+	background-color:silver;
+	width:3.1em;
+	border-weight:solid;
+	border-color:red;
+	
+}
+table{
+border-color:blue;
+border-weight:solid;
+}
+.screen{
+	height:200px;
+}
+input{
+	font-size:10px;
+	background-color:silver;
+}
+.shift{
+	width:6.8em;
+	}
+.caps{
+	width:5em;
+	}
+.tab{
+	width:3.6em;
+}
+.backspace{
+	width:6em;
+}
+.enter{
+	width:5em;
+}
+.back{
+	width:3.8;
+}
+
+.space{
+	width:27em;
+}
+.alt{
+	width:3.1em;
+}

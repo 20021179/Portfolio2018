@@ -1,0 +1,35 @@
+
+bar {
+  color: #FF0000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  
+}
+steinlarger {
+  color: #0000FF;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  display:block;
+
+
+}
+.shot {
+  color: #00FF00;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  display:block;
+
+
+}
+stella {
+  color:#000099;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  display:block;
+  clear:both;
+}

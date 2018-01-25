@@ -1,0 +1,30 @@
+
+drunken {
+  color: #FF0000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  
+}
+monkey {
+  color: #0000FF;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  display: inline;
+}
+.snake {
+  color: #00FF00;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline;
+}
+dragon {
+  color: #000000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  display: inline;
+}

@@ -1,0 +1,391 @@
+<html>
+<head>
+<title>submit_form web page</title>
+<style type="text/css">
+.logo{
+padding-left:180px;
+padding-bottom:10px;
+}
+#errorDisplay{
+	font-family:Arial,san-serif;
+	font-weight:bold;
+	color:red;
+	font-size:12pt;
+	
+
+	
+
+}
+p{
+	font-family:Arial,san-serif;
+	font-weight:solid;
+	color:blue;
+	font-size:8pt;
+}
+h6{
+	font-family:Arial,san-serif;
+	font-weight:solid;
+	color:black;
+	font-size:10pt;
+}
+body
+{
+background-image:url('bgTemplate.gif');
+background-repeat:no-repeat;
+background-position:middle;
+}
+.meme{
+	border:solid black; 
+	border-width:thin;
+}
+.zippy{
+border:groove #99CCFF;
+border-width:thin;
+}
+a{
+font-family:Arial, sans-serif;
+font-weight:bold;
+text-size:16;
+color:navy;
+}
+a:link{
+	color:white;
+}
+a:visited{
+	color:aqua;
+}
+a:hover{
+	color:yellow;
+}
+a:active{
+	color:blue;
+}
+
+#navigation{
+margin-left:-10px;
+margin-right:2px;
+margin-top:20px;
+padding-left:5px;
+padding-right:5px;
+background-color:crimson;
+}
+
+#navigation{
+position:absolute; top:200px; left:2%;
+}
+
+input.smallSearch {
+  width:4em;
+  height:2em;
+  line-height: 0.75em; 
+  font-family:Arial,san-serif;
+	font-weight:solid;
+	color:black;
+	font-size:7pt;
+ } 
+</style>
+</style>
+<script type="text/JavaScript" language="JavaScript">
+//time, day
+var now;	// used for setting date
+var dayName=new Array("Sun","Mon","Tues","Wed","Thurs","Fri","Sat");
+var monName=new Array("January","February","March","April","May","June","July","August","September",
+"October","November","December");
+function showTime() {
+	var frm; // used for setting the entire value
+	
+	//Ensure date is read as current each time update is performed
+	now = new Date();
+	//Format time.  Straitfoward except for ýear', which is relitive to 1900, addition corrects + '1900, only if need be'
+	
+	frm =dayName[now.getDay()]
+	+' '+monName[now.getMonth()]
+	+' '+now.getDate()
+	+' '+(parseInt(now.getYear()))// make sure year is an integer ,frm extracts the day,month,date,time by used get method
+	+' '+now.getHours()
+	+':'+now.getMinutes()
+	+':'+now.getSeconds();
+	
+	document.inputform.time.value = frm;//displays extracted result in the named identifier
+	
+	setTimeout("showTime()", 1000);// passes function to first parameter, second parameter is set to 1000 millseconds
+}
+
+
+
+	
+	
+
+							
+													
+	function form_submit(formObj){
+	
+	// Global variables used for testing
+	var blank=0;
+	var fullName=document.inputform.fName.value;
+	var employer=document.inputform.employ.value
+	var jobPosition=document.inputform.job.value;
+	var qualifications=document.inputform.qualif.value;
+	var inst=document.inputform.institution.value;
+	var emailAddress=document.inputform.email.value;
+	var tree=document.inputform.country.value;
+	var lang=document.inputform.language.value;
+	var extraCountry=document.inputform.otherC.value;
+	var extraLanguage=document.inputform.otherL.value;
+	var contentDescription=document.inputform.description.value;
+	var url=document.inputform.web.value;
+	
+	// regular expressions used to test against above data
+		var reAlf=/^([a-zA-Z \s])+$/;
+		var reEmail=/^[a-z|A-Z|0-9]+@[a-z|A-Z|0-9]+\.[a-z|A-Z]{2,4}$/;
+		var reURL=/^(http)\:\/\/[a-z]{3}\.[a-z|A-Z]+\.[a-z]{2,3}$/;		
+		if(reAlf.test(fullName) && fullName!=""){// start of fullName test
+			//alert("name is sweet");
+		}
+		
+		else{
+		inputform.fName.focus();
+		//alert("please fill in name");
+		var nameError1="'\ Invalidate '\.... attempt, please enter a full name!"; // error 
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}//end of full name test
+	
+	
+		if(reAlf.test(employer)|| employer!=blank){
+			//alert("Employer sweet")
+			
+			}
+			else{
+			inputform.employ.focus();
+			//alert("Please fill in employer!");
+			var nameError1="'\ Invalid '\.... attempt, please enter name of employer!"; // error message
+			var errorDisplay=document.getElementById("errorDisplay");
+			errorDisplay.innerHTML=nameError1;
+			return false;
+			}
+		
+		
+	if (jobPosition!=blank){
+		//alert("job selected");
+		}
+		else{
+		inputform.job.focus();
+		//alert("Please enter a job title!");
+		var nameError1="'\ Invalid '\.... attempt, please select job title!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	
+	
+	if(reAlf.test(qualifications)|| qualifications!=blank){
+		//alert("qualifications sweet");
+		}
+		else{
+		inputform.qualif.focus();
+		//alert("Please enter your qualifications!");
+		var nameError1="'\ Invalid '\.... attmpt made, enter qualifications!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	
+	
+	if(reEmail.test(emailAddress)){
+		//alert("email sweet");
+		}
+		else{
+		inputform.email.focus();
+		//alert("Please fill in email!");
+		var nameError1="'\ Invalid '\.... attempt, please enter a valid email!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	if(inst!=blank){
+	//correct
+	}
+	else{
+		inputform.institution.focus();
+		//alert("Please fill in email!");
+		var nameError1="'\ Invalid '\.... attempt, please enter name of institute!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	
+	if(reURL.test(url)){
+			//alert("country selected done");
+		
+			}
+			else{
+		inputform.web.focus();
+		//alert("Please fill in web!");
+		var nameError1="'\ Invalid '\.... attempt, enter web address!"+" eg: http://www.msn.com"; // error message
+		var validWeb=document.inputform.web.value="http://"
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	
+	
+	if(tree!=blank|| extraCountry!=blank){//////
+			// selection is true
+		
+			}
+			
+			
+			else{
+		inputform.country.focus();
+		//selection is false
+		var nameError1="'\ Invalid' \.... attempt, please enter country!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+		
+	
+	
+	if(lang!=blank || extraLanguage!=blank && reAlf.test(extraLanguage)){////
+		//alert("language done");
+		}
+		else{
+		inputform.language.focus();
+		//alert("Please choose a language!");
+		var nameError1="'\ Invalid '\.... attempt, please enter  language!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}	
+	
+	
+	if(contentDescription!=blank){
+	//alert("description cool");
+		}
+	else{
+		inputform.description.focus();
+		//alert("Please give us a personal description!");
+		var nameError1="'\ Invalid '\.... attempt, please enter description in application letter!"; // error message
+		var errorDisplay=document.getElementById("errorDisplay");
+		errorDisplay.innerHTML=nameError1;
+		return false;
+		}
+	return true;
+	
+}
+	
+	
+</script>
+
+</head>
+
+<body bgColor="#99CCFF" onLoad="showTime()">
+<form name="inputform" onSubmit="return form_submit(this)" method="post" action="application_confirm.asp">
+<div class="logo"><img src="logo.gif"></div>
+<div id="navigation"><div><a href="default.html">Home</a></div><div><a href="application_submit.html">Submit</a></div><div><a href="latest.asp">Latest</a></div><div><a href="#">Database</a></div><div><a href="JavaScript:wind2()">Help</a></div></div>
+<table width="700pxpx" border="0" cellspacing="2" cellpadding="2" align="center" bgColor="#6699FF">
+  <tr>
+    <td colspan="4" align="center"><h3>Please fill in the form below:</h3></td>
+    
+  </tr>
+  <tr>
+   <td>Full Name:</td>
+    <td><input type="text" name="fName" value=""></td>
+    <td>Current Employer:</td>
+    <td>
+<input type="text" name="employ" value=""></td>
+  </tr>
+  <tr>
+    <td>Job Title:</td>
+    <td><select size=1 name="job" STYLE="width: 100px; height:40px;">
+			<option value="">- Select -</option>
+			<option value="Accounting">Accounting</option>
+			<option value="Administration">Administration</option>
+			<option value="Entertain">Entertain</option>
+			<option value=" Banking & Fin. Services">Banking </option>
+			<option value="Call Centre/Cust. Service">Call Centre</option>
+			<option value="Community & Sport">Community</option>		
+			<option value="Construction">  Construction</option>
+			<option value="x">Engineering</option>		
+			<option value="Hospitality"> Hospitality</option>
+			
+			
+		</select></td>
+    <td>Qualifications:</td>
+    <td><input type="text" name="qualif" value=""></td>
+  </tr>
+  <tr>
+    <td>Email Address:</td>
+    <td><input type="text" name="email" ></td>
+    <td>Institution: eg university, polytecnic, trade certificate</td>
+    <td>
+	<input type="text" name="institution" value=""></td>
+  </tr>
+  <tr>
+  <td>Web Address</td>
+  <td><input type="text" name="web" value=""></td></tr>
+  <tr>
+    <td>County Of Origin:</td>
+	<td><select size=1 name="country" STYLE="width: 165px;">
+			<option value="">- Select -</option>
+			<option value="New Zealand">New Zealand</option>
+			<option value="Samoa">Samoa</option>
+			<option value="China">China</option>
+			<option value="India">India</option>
+			<option value="somalia">somalia</option>
+			<option value="x">...</option>
+			
+		</select></td>
+		<td>In-language (choose a language)</td>
+		<td>
+		<select size=1 name="language" STYLE="width: 100px; height:40px;">
+			<option value="">- Select -</option>
+			<option value="English">England</option>
+			<option value="Greek">Greek</option>
+			<option value="Ïtalian">Italian</option>
+			<option value="Other">Other</option>
+			<option value="x">...</option>
+			
+		</select></td>
+	
+    
+  </tr>
+  <tr>
+    <td >Other countries that have not been listed:</td>
+    <td><input type="text" name="otherC"  size="20" value=""></td>
+    <td>Other languages that have not been listed:</td>
+	<td><input type="text" name="otherL" value=""></td>
+   
+  </tr>
+  <tr>
+    <td>Description:(please give a short and descriptive summary of yourself) </td>
+	<td colspan="3">
+	<textarea Rows=3 cols=60 name="description" height="100" value="">
+	</textarea></td>
+    
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="do" value="Submit" onClick="form_submit()"></td>
+    <td colspan="2"><input type="text" name="time" size="20"></td>
+    
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  
+  
+  
+</table>
+</form>
+<div align="center"><a href="default.html">Click here</a> to go back</div> 
+<div id="errorDisplay" align="center"></div>
+<div></div>
+
+</body>
+</html>

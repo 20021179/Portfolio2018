@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>submit_form web page</title>
+
+<script type="text/JavaScript">
+function lang_do()
+{
+	alert("Language was selected");
+}
+function radio_done()
+{
+	var coolRadio=document.inputform.Radio1.value
+	var textOut=document.getElementById("textOut");
+	
+	textOut.innerHTML = coolRadio;
+	
+}
+function form_submit()
+{
+	document.write('<table><tr><td>'+document.inputform.my_text.value+'</td></tr>'+'<tr><td>'+document.inputform.Lan.value+'</td></tr><tr><td>'+document.inputform.Description.value+'</td></tr></table>');
+	//document.write('<table><tr><td>'+document.radio.Radio1.value+'</td></tr></table>');
+
+}
+</script>
+
+</head>
+
+<body>
+<P>This page illustrates HTML, objects needed for your project 2.</P>
+<P>Please fill in details of the input form, then click on <B>submit</B>-.</P>
+<form NAME="inputform"ACTION="">
+<pre>
+<br>Value input = <input TYPE="TEXT" NAME="my_text" VALUE="1" SIZE="12">
+
+<br>In-language=<select size=1 name="Lan" STYLE="width: 165px;"
+						onchange="lang_do()">
+			<option value="">- Select -</option>
+			<option value="English">England</option>
+			<option value="Greek">Greek</option>
+			<option value="Ïtalian">Italian</option>
+			<option value="Other">Other</option>
+			<option value="x">...</option>
+			
+		</select>
+		
+		<br>Description=<textarea Rows=3 cols=60 name="Description">
+		Text input
+		</textarea>
+		
+		<br>Radio butt.=<input type="radio" value="V2" name="Radio1" onClick="radio_done(this)">
+								
+		<br><input TYPE="BUTTON" NAME="do" VALUE="-submit-" onClick="form_submit()">
+		</pre>
+		<div id="textOut"></div>
+<form>
+</body>
+</html>

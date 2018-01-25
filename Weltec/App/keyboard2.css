@@ -1,0 +1,76 @@
+
+.send{
+	background-color:silver;
+}
+.menu{
+	background-color:silver;
+	font-size:12px;
+	color:black;
+	width:100px;
+	left:100px;
+	position:absolute;
+	top:150px;
+}
+
+
+
+/*  below are all the keyboard styles */
+.butts{
+	background-color:silver;
+	width:3.0em;
+	
+}
+.butts1{
+	background-color:silver;
+	width:2.8em;
+	
+}
+.butts2{
+	background-color:silver;
+	width:3.1em;
+	border-weight:solid;
+	border-color:red;
+	
+}
+
+.screen{
+	height:200px;
+	background-color:silver;
+	border:bevel;
+	color:navy;
+	
+}
+
+.shift{
+	width:6.8em;
+	background-color:silver;
+	}
+.caps{
+	width:5em;
+	background-color:silver;
+	}
+.tab{
+	width:3.6em;
+	background-color:silver;
+}
+.backspace{
+	width:6em;
+	background-color:silver;
+}
+.enter{
+	width:5em;
+	background-color:silver;
+}
+.back{
+	width:3.8;
+	background-color:silver;
+}
+
+.space{
+	width:27em;
+	background-color:silver;
+}
+.alt{
+	width:3.1em;
+	background-color:silver;
+}

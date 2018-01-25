@@ -1,0 +1,144 @@
+#container {
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main {
+	background-color: #99CCCC;
+	float: right;
+	width: 780px;
+	padding-left:20px;
+	padding-top:10px;
+	padding-right:20px;
+}
+#sidebar {
+	padding: 0px;
+	margin-top:-120px;
+	float: left;
+	width: 130px;
+	background-image: url(images/navigation.gif);
+	background-repeat: no-repeat;
+	height: 500px;
+}
+body{
+background-color:#336666;
+}
+/*#footer {
+	background-color: #FF0000;
+	padding: 10px;
+	height: 20px;
+	clear: left;
+}*/
+#top {
+	height: 120px;
+	width: 820px;
+	margin-left:130px;
+}
+
+#button1{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:160px;
+	margin-left:10px;
+	}
+	#button2{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	}
+	#button3{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	}
+	#button4{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	}
+	#button5{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	}
+	#button6{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	
+	}
+	#button7{
+	width:95px;
+	height:30px;
+	z-index:8;
+	margin-top:5px;
+	margin-left:10px;
+	
+	
+	}
+	.pic1{
+		width:120;
+		height:120;
+		padding-right:20px;
+		padding-left:10px;
+		padding-top:15px;
+		float:right;
+		}
+		
+		.pic2{
+		width:120;
+		height:120;
+		padding-right:20px;
+		padding-left:10px;
+		padding-top:30px;
+		float:right;
+		margin-top:200px;
+		
+		
+	}
+		
+#option1{
+	width:400px;
+	height:120;
+	margin-right:20px;
+	background-color:#336666;
+	
+	margin-top:-60px;
+	float:right;
+}
+
+#select1{
+	margin-top:5px;
+	width:10%;
+	
+}
+#select2{
+	margin-top:5px;
+	width:10%;
+}
+#select3{
+	margin-top:5px;
+	width:10%;
+}
+#select4{
+	margin-top:5px;
+	width:10%;
+	
+}
+#contact {
+	background-color:#336666;
+	width: 500px;
+	top:40px;
+	padding-bottom:40px;
+}

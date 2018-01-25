@@ -1,0 +1,12 @@
+<script language="JavaScript" RUNAT="Server">
+
+function Application_OnStart()
+{
+	Application("chatSoFar")="";
+}
+
+function Session_OnStart()
+{
+	Session("name")="";
+}
+</script>

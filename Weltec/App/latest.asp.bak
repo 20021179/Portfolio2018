@@ -1,0 +1,157 @@
+<% @Language="JavaScript" %>
+<html>
+<!--Web page "sample_handling.asp" prepared by...at..on...-->
+<head>
+<title>Server form confirmation...out file</title>
+<%
+// start of variables
+var frmFullNameField=Request("fName");
+var frmEmployerField=Request("employ");
+var frmJobField=Request("job");
+var frmQualificationField=Request("qualif");
+var frmEmailField=Request("email");
+var frmCountryField=Request("country");
+var frmCountryField2=Request("otherC");
+var frmLanguageField=Request("language");
+var frmLanguageField2=Request("otherL");
+var frmDescriptionField=Request("description");
+var frmWebField=Request("web");
+var today_is=new Date();
+var in_code=today_is.toGMTString();
+ // end of variables
+function read_to_file()
+{
+//This function writes the content of client form to s disk file
+
+ today_is=new Date();
+ in_code=today_is.toGMTString();
+ filename="latest.txt";
+
+var file_system_object=Server.CreateObject("Scripting.FileSystemObject");
+var outfile=file_system_object.CreateTextFile(Server.MapPath(filename));//read to new file
+var outfile=file_system_object.ReadTextFile(Server.MapPath(filename),8);//'8'=Appends text
+outfile.WriteLine("Order file created on "+in_code);
+outfile.WriteLine("Fullname is "+frmFullNameField);
+//outfile.WriteLine("Employer is "+frmEmployerField);
+//outfile.WriteLine("Job is "+frmJobField);
+//outfile.WriteLine("Qualification is "+frmQualificationField);
+//outfile.WriteLine("Email is "+frmEmailField);
+//outfile.WriteLine("Country is "+frmCountryField);
+//outfile.WriteLine("The unlisted country is "+frmCountryField2);
+//outfile.WriteLine("Language is "+frmLanguageField);
+//outfile.WriteLine("The unlisted language is "+frmLanguageField2);
+//outfile.WriteLine("Description is "+frmDescriptionField);
+outfile.WriteLine("Web address is "+frmWebField);
+outfile.Close();
+s="Output file was created";
+
+}
+read_to_file();
+Response.Write(s+'on '+in_code+'<br>');
+%>
+</head>
+<body bgColor="#99CCFF">
+<script language="JavaScript" RUNAT=Server>
+Response.Write('This task is completed!'+'<br>');
+</script>
+<form>
+<table width="700px" border="0" cellspacing="2" cellpadding="2" bgColor="#6699FF" align="center">
+  <tr>
+    <td colspan="4"><h1>Order Confirmed</h1>
+<p>Following order form was received(please check details)<br>
+and are storder in a disk file named URL_DB.txt.</p><br></td>
+  </tr>
+  <tr>
+    <td>Name:</td>
+    <td><input type="text" name="fName" value="<% Response.Write(frmFullNameField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Employer:</td>
+    <td>
+<input type="text" name="employ"value="<% Response.Write(frmEmployerField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Job:</td>
+    <td>
+<input type="text" name="job"value="<% Response.Write(frmJobField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Qualification:</td>
+    <td>
+<input type="text" name="qualif"value="<% Response.Write(frmQualificationField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><input type="text" name="email"value="<% Response.Write(frmEmailField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Country:</td>
+    <td><input type="text" name="country"value="<% Response.Write(frmCountryField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+    <tr>
+    <td>Unlisted Country:</td>
+    <td><input type="text" name="otherC"value="<% Response.Write(frmCountryField2)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+
+  <tr>
+    <td>Language:</td>
+    <td>
+
+<input type="text" name="language"value="<% Response.Write(frmLanguageField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Unlisted language:</td>
+    <td>
+<input type="text" name="otherL"value="<% Response.Write(frmLanguageField2)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>
+<input type="text" name="description"value="<% Response.Write(frmDescriptionField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Web site:</td>
+    <td>
+
+<input type="text" name="web"value="<% Response.Write(frmWebField)%>"size="25"></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+<p>Shift back to <a href="default.html">home page</a>!</p></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

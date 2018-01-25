@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Client form submission</title>
+
+<script type="text/JavaScript">
+<!--
+var digits_only=true;//Boolean variable indicating the absence of digits
+
+function validate_form()
+{
+var in_name="empty"; //Accepts and stores the content of input form
+//This part carries out the validation of the name field for empty
+in_name=window.document.validate.surname.value
+if(!checks_for_filled(in_name))
+{
+alert("Error: the name field is not filled");
+}
+else
+{
+//This part carries out the validation of the name field for presence of digits
+in_name=window.document.validate.surname.value
+if(check_for_presence_of_digits(in_name))
+{
+alert("Error: the name field contains illegal characters"+
+	"\n"+"(e.g. digits, minus, full stop)");
+}
+}
+
+function checks_for_filled(in_name)
+//This function returns "true" if"in_name" striong is not empty
+{
+var filled_up=false;//Boolean variable indicating the absence of input
+//This function confirms when the input form was filled up!
+if(in_name!="")//This checks for input box filled up!
+{
+filled_up=true;
+}
+return filled_up;
+}
+
+function check_for_presence_of_digits(in_code)
+{
+//This function seeks digits within the input string
+var how_long=0;//Stores the length of the input  string(number of chars)
+var count,i=0;//Counter variable for indication the position of characters
+var text=""; //Variable to hold the string object
+var char_analysed="No char yet!";
+var char_number=12;
+var char_list=new Array("0","1","2","3","4","5","6","7","8","9","-",".");
+var digits_present=false;// Boolean variable indicating the absence of digits
+text=new String(in_code);//Creates the String object
+how_long=text.lenght;//"lenght" determines the number of chars in a string
+//alert(" The lenght of string is "+how_long+"chars!");
+for (count=0; count<how_long;+count)//Checks each character of the string
+{
+char_analysed=text.charAt(count);//"charAt" extracts the char indicated
+//"indexOf(pattern)" returns the index of"pattern" from the string or returns -1
+//alert("Char"+count+"is"+char_analysed);
+var digit_found=false;
+for(i=0; i<char_number; ++i)//Checks for the presence of each digit
+{
+	if(char_analysed==char_list[i])//Seeks digits inside the input string
+	{
+	digits_present=true;
+	digit_found=true;
+	}
+}	
+	if(!digit_found)
+	{
+	digits_only=false;
+	}
+}
+return digits_present;
+}
+}
+//-->
+</script>
+<body>
+<h1>Order Form</h1>
+<p>Please fill this order form <br>
+then click<b>validate the form</b>so that<br>
+JavaScript can validate your input.<br>
+After the form is validated click<b>SUBMIT</b>to submit the form.</p><br>
+
+<form name="validate" action="sample_handling.asp" method="post" onSubmit="return validate_form()"> >
+<pre>
+<p>Name<input type="text"  name="surname" value="" size="25">
+<p>Amount<input type="text" name="amount" value="" size="25">
+</pre>
+
+<input type="submit" name=" send" value="SUBMIT" >
+</form>
+<p>Shift back to<a href="default.asp" target="_blank">home page</a>!</p>
+</body>
+</html>
